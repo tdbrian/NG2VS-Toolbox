@@ -175,11 +175,29 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Label Add.png" />
+    <Resource Include="Resources\Label Configure Existing.png" />
+    <Resource Include="Resources\Label Contribute.png" />
+    <Resource Include="Resources\Label Documentation.png" />
+    <Resource Include="Resources\Label Getting Started.png" />
+    <Resource Include="Resources\Documentation Bar Icon.jpg" />
+    <Resource Include="Resources\Getting Started Bar Icon.jpg" />
+    <Resource Include="Resources\Github Bar Icon.jpg" />
+    <Resource Include="Resources\Main Title.png" />
+    <Resource Include="Resources\Open Project Bar Icon.jpg" />
+    <Resource Include="Resources\Header Help Button.png" />
+    <Resource Include="Resources\Header Github Button.png" />
+    <Resource Include="Resources\Header Navigation Button.png" />
+    <Resource Include="Resources\Header Properties Button.png" />
+    <Resource Include="Resources\Header Run Button.png" />
+    <Resource Include="Resources\Header Videos Button.png" />
+    <Resource Include="Resources\Header Add Button.png" />
     <VSCTCompile Include="Angular2ToolboxWindowPackage.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
     </VSCTCompile>
     <Resource Include="Resources\angular2toolboxlogo.png" />
     <Content Include="License.txt" />
+    <Resource Include="Resources\Add Project Bar Icon.jpg" />
     <Content Include="Resources\Angular2ToolboxIcon.jpg" />
     <Content Include="Resources\Angular2ToolboxIcon.png" />
     <Content Include="Resources\Angular2ToolboxPreviewImage.jpg" />
