@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
+  <Metadata>
+    <Identity Id="Angular2_Toolbox.Thomas Brian.d266fec3-a461-4870-aab9-1c80da49fcc0" Version="1.0" Language="en-US" Publisher="Thomas Brian" />
+    <DisplayName>Angular2  Toolbox</DisplayName>
+    <Description xml:space="preserve">Angular2 Toolbox allows for quickly creating Angular2 single page applications similar to Angular 2 CLI but with a GUI. Includes tools for inserting a NG2 application into a newly created .Net project. Scaffolding builds out NG2 components, services, routing, directives, and pipes with minimal effort including unit test setups with each. Client side module and build setup allow for getting started quickly using WebPack in Visual Studio. Check out ts8.io for walkthroughs and videos for ramping up quickly with NG2 in Visual Studio.</Description>
+    <License>License.txt</License>
+    <Icon>Resources\Angular2ToolboxIcon.jpg</Icon>
+    <PreviewImage>Resources\Angular2ToolboxPreviewImage.jpg</PreviewImage>
+    <MoreInfo>http://www.ts8.io</MoreInfo>
+    <Tags>Angular, 2, Angular2, NG2, NG, CLI, scaffolding, getting, started, ts8, ts8.io</Tags>
+  </Metadata>
+  <Installation>
+    <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="14.0" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[15.0]" />
+  </Installation>
+  <Dependencies>
+    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
+    <Dependency Id="Microsoft.VisualStudio.MPF.15.0" DisplayName="Visual Studio MPF 15.0" d:Source="Installed" Version="[15.0]" />
+  </Dependencies>
+  <Assets>
+    <Asset Type="Microsoft.VisualStudio.VsPackage" d:Source="Project" d:ProjectName="%CurrentProject%" Path="|%CurrentProject%;PkgdefProjectOutputGroup|" />
+  </Assets>
+</PackageManifest>
