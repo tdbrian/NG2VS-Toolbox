@@ -175,6 +175,7 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\Header Home Button.png" />
     <Resource Include="Resources\Label Add.png" />
     <Resource Include="Resources\Label Configure Existing.png" />
     <Resource Include="Resources\Label Contribute.png" />

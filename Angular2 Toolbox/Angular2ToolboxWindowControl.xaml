@@ -11,47 +11,71 @@
 
     <Grid>
         <StackPanel Orientation="Vertical">
+
+            <!-- Navigation Panel -->
             <StackPanel Name="navigationPanel" Height="30" Background="#3F000000" Orientation="Horizontal">
-                <Image x:Name="headerAddBtn" Source="Resources/Header Add Button.png" Margin="10,0,0,0" Cursor="Hand" HorizontalAlignment="Left" ToolTip="Add NG2 Item" Width="17" Height="17"/>
+                <Image x:Name="headerHomeBtn" Source="Resources/Header Home Button.png" Margin="10,0,0,0" Cursor="Hand" HorizontalAlignment="Left" ToolTip="Home" Width="17" Height="17" MouseDown="goHome"/>
+                <Image x:Name="headerAddBtn" Source="Resources/Header Add Button.png" Margin="7,0,0,0" Cursor="Hand" HorizontalAlignment="Left" ToolTip="Add NG2 Item" Width="17" Height="17"/>
                 <Image x:Name="headerNavigationButton" Height="17" Source="Resources/Header Navigation Button.png" Width="17" Margin="7,0,0,0" Cursor="Hand"  HorizontalAlignment="Left" ToolTip="App Navigation"/>
                 <Image x:Name="headerSettingsBtn" Height="17" Source="Resources/Header Properties Button.png" Width="17" Margin="7,0,0,0" Cursor="Hand" HorizontalAlignment="Left" ToolTip="Settings"/>
                 <Image x:Name="headerRunBtn" Height="17" Source="Resources/Header Run Button.png" Width="17" Margin="7,0,0,0" Cursor="Hand" HorizontalAlignment="Left" ToolTip="Run"/>
                 <Image x:Name="headerVideosBtn" Source="Resources/Header Videos Button.png" Margin="10,0,0,0" HorizontalAlignment="Left" Cursor="Hand" ToolTip="Videos" Height="17" Width="23"/>
-                <Image x:Name="headerGithubBtn" Height="17" Source="Resources/Header Github Button.png" Width="17" Margin="7,0,0,0" Cursor="Hand" HorizontalAlignment="Left" ToolTip="Github Project"/>
+                <Image x:Name="headerGithubBtn" Height="17" Source="Resources/Header Github Button.png" Width="17" Margin="7,0,0,0" Cursor="Hand" HorizontalAlignment="Left" ToolTip="Github Project" MouseUp="openProjectGithub"/>
                 <Image x:Name="headerHelpBtn" Height="17" Source="Resources/Header Help Button.png" Width="17" Margin="7,0,0,0" Cursor="Hand" HorizontalAlignment="Left" ToolTip="NG2 Documentation"/>
             </StackPanel>
-            <Image x:Name="mainTitle" Height="19" Source="Resources/Main Title.png" Margin="10,15,37,10" HorizontalAlignment="Left" Width="127"/>
-            <StackPanel Orientation="Horizontal" Margin="10,5" Background="#3F000000" Cursor="Hand">
-                <Image Name="gettingStartedBtnIcon" Width="48" Height="42" Source="Resources/Getting Started Bar Icon.jpg"/>
-                <StackPanel>
-                    <Image Name="labelGettingStarted" Height="42" Source="Resources/Label Getting Started.png"/>
+
+            <!-- Welcome Panel -->
+            <StackPanel Name="welcomePanel" Visibility="Collapsed">
+                <Image x:Name="mainTitle" Height="19" Source="Resources/Main Title.png" Margin="10,15,37,10" HorizontalAlignment="Left" Width="127"/>
+                <StackPanel Orientation="Horizontal" Margin="10,5" Background="#3F000000" Cursor="Hand">
+                    <Image Name="gettingStartedBtnIcon" Width="48" Height="42" Source="Resources/Getting Started Bar Icon.jpg"/>
+                    <StackPanel>
+                        <Image Name="labelGettingStarted" Height="42" Source="Resources/Label Getting Started.png"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="10,0,10,5" Background="#3F000000" Cursor="Hand">
-                <Image Name="addNewProjectBtnIcon" Width="48" Height="42" Source="Resources/Add Project Bar Icon.jpg"/>
-                <StackPanel>
-                    <Image Name="labelAddNewProject" Height="42" Source="Resources/Label Add.png"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0,10,5" Background="#3F000000" Cursor="Hand" MouseUp="showNewNg2App">
+                    <Image Name="addNewProjectBtnIcon" Width="48" Height="42" Source="Resources/Add Project Bar Icon.jpg"/>
+                    <StackPanel>
+                        <Image Name="labelAddNewProject" Height="42" Source="Resources/Label Add.png"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="10,0,10,5" Background="#3F000000" Cursor="Hand">
-                <Image Name="configureProjectBtnIcon" Width="48" Height="42" Source="Resources/Open Project Bar Icon.jpg"/>
-                <StackPanel>
-                    <Image Name="labelConfigureProject" Height="42" Source="Resources/Label Configure Existing.png"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0,10,5" Background="#3F000000" Cursor="Hand">
+                    <Image Name="configureProjectBtnIcon" Width="48" Height="42" Source="Resources/Open Project Bar Icon.jpg"/>
+                    <StackPanel>
+                        <Image Name="labelConfigureProject" Height="42" Source="Resources/Label Configure Existing.png"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="10,0,10,5" Background="#3F000000" Cursor="Hand">
-                <Image Name="githubBtnIcon" Width="48" Height="42" Source="Resources/Github Bar Icon.jpg"/>
-                <StackPanel>
-                    <Image Name="labelGithubProject" Height="42" Source="Resources/Label Contribute.png"/>
+                <StackPanel Orientation="Horizontal" Margin="10,0,10,5" Background="#3F000000" Cursor="Hand" MouseUp="openProjectGithub">
+                    <Image Name="githubBtnIcon" Width="48" Height="42" Source="Resources/Github Bar Icon.jpg"/>
+                    <StackPanel>
+                        <Image Name="labelGithubProject" Height="42" Source="Resources/Label Contribute.png"/>
+                    </StackPanel>
                 </StackPanel>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" Margin="10,0,10,5" Background="#3F000000" Cursor="Hand">
-                <Image Name="docsBtnIcon" Width="48" Height="42" Source="Resources/Documentation Bar Icon.jpg"/>
-                <StackPanel>
-                    <Image Name="labelDocs" Height="42" Source="Resources/Label Documentation.png"/>
+                <StackPanel Name="ng2DocumentationBtn" Orientation="Horizontal" Margin="10,0,10,5" Background="#3F000000" Cursor="Hand" MouseUp="openDocumentation">
+                    <Image Name="docsBtnIcon" Width="48" Height="42" Source="Resources/Documentation Bar Icon.jpg"/>
+                    <StackPanel>
+                        <Image Name="labelDocs" Height="42" Source="Resources/Label Documentation.png"/>
+                    </StackPanel>
                 </StackPanel>
+                <Image x:Name="image1" Height="215" Source="Resources/angular2toolboxlogo.png" Margin="0,15,0,0" HorizontalAlignment="Center" Width="129"/>
             </StackPanel>
-            <Image x:Name="image1" Height="215" Source="Resources/angular2toolboxlogo.png" Margin="0,15,0,0" HorizontalAlignment="Center" Width="129"/>
+
+            <!-- Add NG2 Panel -->
+            <StackPanel Name="addNg2Panel" Visibility="Visible">
+                <TextBlock Text="Add NG2 to the Current Project" Margin="10,10,10,0" FontSize="16" />
+                <TextBlock Text="First, we need to know where you would like to add the new Angular2 project at. We'll add a folder at this location named 'app' and puth the new NG2 applicaiton in there." Margin="10,10,10,15" TextWrapping="Wrap" />
+                <TextBlock Name="selectNewFolderNg2Btn" Text="Select Folder Init NG2 In" Foreground="White" Height="32" Background="#FF9C161A" Margin="10,0,10,7" TextAlignment="Center" Padding="7" Cursor="Hand" MouseUp="selectNewProjectFolder"/>
+                <TextBlock Name="newNg2SelectedFolderInfo" Text="Selected Location: (Not Found)" Margin="10,0,10,7" TextWrapping="Wrap" />
+
+                <StackPanel Name="newAppDetailsPanel">
+                    <TextBlock Text="App Name:" Margin="10,0,10,5" TextWrapping="Wrap" />
+                    <TextBox Name="newAppNameInput" Margin="10,0,10,15" Background="#3F000000" SelectionBrush="#FF9C161A" BorderBrush="#3FABADB3" Padding="7" Foreground="White"/>
+                    <TextBlock Name="addNewNg2Btn" Text="Add NG2" Foreground="White" Height="32" Background="#FF9C161A" Margin="10,0,10,7" TextAlignment="Center" Padding="7" Cursor="Hand" MouseUp="addNewNg2"/>
+                </StackPanel>
+                    
+                <TextBlock Text="Back" Foreground="White" Height="32" Background="#FF9C161A" Margin="10,0" TextAlignment="Center" Padding="7" Cursor="Hand" MouseUp="goHome"/>
+            </StackPanel>
+
         </StackPanel>
     </Grid>
 </UserControl>
